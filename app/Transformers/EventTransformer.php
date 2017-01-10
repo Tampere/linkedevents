@@ -1,0 +1,58 @@
+<?php
+namespace Transformers;
+
+class EventTransformer extends Transformer
+{
+    public function transform($item)
+    {
+        $payload = [
+            'id' => $item->id,
+            '@id' => url('/event/' . $item->id),
+            '@context' => 'http://schema.org',
+            '@type' => 'Event/LinkedEvent',
+            'location' => $this->transformLocation($item->location),
+            'name' => json_decode($item->name_tr),
+            'description' => json_decode($item->description_tr),
+            'super_event' => $item->super_event_id,
+            'last_modified_time' => $item->updated_at->toIso8601String(),
+            'info_url' => json_decode($item->info_url_tr),
+            'date_published' => $item->date_published->toIso8601String(),
+            'image' => $item->image
+        ];
+
+        if($item->is_recurring_super) {
+            $payload['sub_events'] = $this->mapSubEventIds($item->children->pluck('id')->toArray());
+        } else {
+            $payload['start_time'] = $item->start_time->toIso8601String();
+            $payload['end_time'] = $item->end_time->toIso8601String();
+        }
+
+        return $payload;
+    }
+
+    protected function mapSubEventIds(array $subEventIds)
+    {
+        return array_map(function($id) {
+            return [
+                '@id' => url('/event/' . $id)
+            ];
+        }, $subEventIds);
+    }
+
+    private function transformLocation($location)
+    {
+        $payload = [
+            'id' => $location->id,
+            '@id' => url('/place/' . $location->id),
+            '@context' => 'http://schema.org',
+            '@type' => 'Place',
+            'name' => json_decode($location->name_tr),
+            'street_address' => json_decode($location->street_address_tr),
+            'address_region' => $location->address_region,
+            'postal_code' => $location->postal_code,
+            'data_source_id' => $location->data_source_id,
+        ];
+
+        return $payload;
+    }
+}

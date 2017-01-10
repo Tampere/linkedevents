@@ -1,0 +1,1168 @@
+[
+  {
+    "item_id": 4047,
+    "lang": "en",
+    "title": "Sounds 2015 - young people's musical experiment",
+    "description": "Classical and folk music plaeyd by young people in Monitoimitalo 13.",
+    "contact_info": {
+      "id": 4218,
+      "address": "Satakunnankatu 13",
+      "postcode": null,
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.nuortentampere.fi/",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1426675738805,
+    "updated_at": 1426675852000,
+    "image": {
+      "item_id": 4048,
+      "src": "http://visittampere.fi/media/3801af30-cd5b-11e4-b562-49633546a53f.png",
+      "title": "sounds.png"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "music"
+    ],
+    "is_free": true,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": false,
+    "times": [],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 14320,
+    "lang": "en",
+    "title": "Tampere 21st. Flamenco Week: Flamenco sin Fronteras",
+    "description": "The documentary Flamenco sin Fronteras (flamenco without borders) tells us about the life and work of Spanish flamenco artists and was directed by Italian Filippo Ciardi. For this documentary he interviewed over 40 professional flamenco artists from the heart of flamenco, Andalucía. The documentary wants to show us what flamenco is like nowadays and how it is connected to its roots and traditions. The documentary’s language is Spanish, with English subtitles",
+    "contact_info": {
+      "id": 9139,
+      "address": "Satakunnankatu 13",
+      "postcode": null,
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://tampereflamenco.com/",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1469432163542,
+    "updated_at": 1469433470862,
+    "image": {
+      "item_id": 14321,
+      "src": "http://visittampere.fi/media/3c286580-523a-11e6-926c-f35d67fccdbc.jpg",
+      "title": "Manuel-y-Alba-Molina-foto-cartel-FSF.jpg"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "festival"
+    ],
+    "is_free": true,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [
+      {
+        "id": 7663,
+        "start_datetime": 1469709000000,
+        "end_datetime": 1469717100000
+      },
+      {
+        "id": 7664,
+        "start_datetime": 1469891700000,
+        "end_datetime": 1469899800000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 3223,
+    "lang": "en",
+    "title": "Stargazing presentation",
+    "description": "Traditional stargazing presentation at the Kauppi water tower. Wrap up warm!",
+    "contact_info": {
+      "id": 3710,
+      "address": "Kaupinpuistonkatu 28",
+      "postcode": null,
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.tampereenursa.fi/",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1422533797193,
+    "updated_at": 1423572485657,
+    "image": {
+      "item_id": 2933,
+      "src": "http://visittampere.fi/media/8af17c20-a22c-11e4-b4d9-b554150d3034.JPG",
+      "title": "tähtipongaus.JPG"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "other-event"
+    ],
+    "is_free": false,
+    "ticket_link": "http://www.tampereenursa.fi/",
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [
+      {
+        "id": 317,
+        "start_datetime": 1423414800000,
+        "end_datetime": 1423422000000
+      },
+      {
+        "id": 318,
+        "start_datetime": 1424019600000,
+        "end_datetime": 1424026800000
+      },
+      {
+        "id": 319,
+        "start_datetime": 1424624400000,
+        "end_datetime": 1424631600000
+      },
+      {
+        "id": 320,
+        "start_datetime": 1425229200000,
+        "end_datetime": 1425236400000
+      },
+      {
+        "id": 321,
+        "start_datetime": 1425834000000,
+        "end_datetime": 1425841200000
+      },
+      {
+        "id": 322,
+        "start_datetime": 1426438800000,
+        "end_datetime": 1426446000000
+      },
+      {
+        "id": 323,
+        "start_datetime": 1427043600000,
+        "end_datetime": 1427050800000
+      },
+      {
+        "id": 324,
+        "start_datetime": 1427644800000,
+        "end_datetime": 1427652000000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 14116,
+    "lang": "en",
+    "title": "Särkänniemi Children's Sunday: Maltti ja Valtti Musashow!",
+    "description": "Särkänniemi Children's Sunday with TV personalities Maltti & Valtti. The event is free and for all ages.",
+    "contact_info": {
+      "id": 9038,
+      "address": "Särkänniemi",
+      "postcode": "33230",
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.sarkanniemi.fi/ohjelmakesa-2016/",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1467799722812,
+    "updated_at": 1467807734176,
+    "image": {
+      "item_id": 14100,
+      "src": "http://visittampere.fi/media/d5bf0520-434c-11e6-926c-f35d67fccdbc.jpg",
+      "title": "lastensunnuntai särkanniemi.jpg"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "for-children"
+    ],
+    "is_free": true,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [
+      {
+        "id": 7615,
+        "start_datetime": 1468760400000,
+        "end_datetime": 1468789140000
+      },
+      {
+        "id": 7616,
+        "start_datetime": 1469970000000,
+        "end_datetime": 1469998740000
+      },
+      {
+        "id": 7617,
+        "start_datetime": 1470574800000,
+        "end_datetime": 1470603540000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 4057,
+    "lang": "en",
+    "title": "Restaurant Boat's afternoon cruise",
+    "description": "A delicious meal combined with a relaxing cruise.",
+    "contact_info": {
+      "id": 4224,
+      "address": "Laukontori",
+      "postcode": null,
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.ravintolalaiva.fi",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1426683576589,
+    "updated_at": 1432628980648,
+    "image": {
+      "item_id": 4146,
+      "src": "http://visittampere.fi/media/15d3a690-d2ea-11e4-9def-7f9a6b524531.jpg",
+      "title": "ravintolalaiva uusi.jpg"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "other-event"
+    ],
+    "is_free": false,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [
+      {
+        "id": 1909,
+        "start_datetime": 1433854800000,
+        "end_datetime": 1433862000000
+      },
+      {
+        "id": 1910,
+        "start_datetime": 1433941200000,
+        "end_datetime": 1433948400000
+      },
+      {
+        "id": 1911,
+        "start_datetime": 1434027600000,
+        "end_datetime": 1434034800000
+      },
+      {
+        "id": 1912,
+        "start_datetime": 1434114000000,
+        "end_datetime": 1434121200000
+      },
+      {
+        "id": 1913,
+        "start_datetime": 1434200400000,
+        "end_datetime": 1434207600000
+      },
+      {
+        "id": 1914,
+        "start_datetime": 1434459600000,
+        "end_datetime": 1434466800000
+      },
+      {
+        "id": 1915,
+        "start_datetime": 1434546000000,
+        "end_datetime": 1434553200000
+      },
+      {
+        "id": 1916,
+        "start_datetime": 1434632400000,
+        "end_datetime": 1434639600000
+      },
+      {
+        "id": 1917,
+        "start_datetime": 1434718800000,
+        "end_datetime": 1434726000000
+      },
+      {
+        "id": 1918,
+        "start_datetime": 1434805200000,
+        "end_datetime": 1434812400000
+      },
+      {
+        "id": 1919,
+        "start_datetime": 1435064400000,
+        "end_datetime": 1435071600000
+      },
+      {
+        "id": 1920,
+        "start_datetime": 1435150800000,
+        "end_datetime": 1435158000000
+      },
+      {
+        "id": 1921,
+        "start_datetime": 1435237200000,
+        "end_datetime": 1435244400000
+      },
+      {
+        "id": 1922,
+        "start_datetime": 1435323600000,
+        "end_datetime": 1435330800000
+      },
+      {
+        "id": 1923,
+        "start_datetime": 1435410000000,
+        "end_datetime": 1435417200000
+      },
+      {
+        "id": 1924,
+        "start_datetime": 1435669200000,
+        "end_datetime": 1435676400000
+      },
+      {
+        "id": 1925,
+        "start_datetime": 1435755600000,
+        "end_datetime": 1435762800000
+      },
+      {
+        "id": 1926,
+        "start_datetime": 1435842000000,
+        "end_datetime": 1435849200000
+      },
+      {
+        "id": 1927,
+        "start_datetime": 1435928400000,
+        "end_datetime": 1435935600000
+      },
+      {
+        "id": 1928,
+        "start_datetime": 1436014800000,
+        "end_datetime": 1436022000000
+      },
+      {
+        "id": 1929,
+        "start_datetime": 1436274000000,
+        "end_datetime": 1436281200000
+      },
+      {
+        "id": 1930,
+        "start_datetime": 1436360400000,
+        "end_datetime": 1436367600000
+      },
+      {
+        "id": 1931,
+        "start_datetime": 1436446800000,
+        "end_datetime": 1436454000000
+      },
+      {
+        "id": 1932,
+        "start_datetime": 1436533200000,
+        "end_datetime": 1436540400000
+      },
+      {
+        "id": 1933,
+        "start_datetime": 1436619600000,
+        "end_datetime": 1436626800000
+      },
+      {
+        "id": 1934,
+        "start_datetime": 1436878800000,
+        "end_datetime": 1436886000000
+      },
+      {
+        "id": 1935,
+        "start_datetime": 1436965200000,
+        "end_datetime": 1436972400000
+      },
+      {
+        "id": 1936,
+        "start_datetime": 1437051600000,
+        "end_datetime": 1437058800000
+      },
+      {
+        "id": 1937,
+        "start_datetime": 1437138000000,
+        "end_datetime": 1437145200000
+      },
+      {
+        "id": 1938,
+        "start_datetime": 1437224400000,
+        "end_datetime": 1437231600000
+      },
+      {
+        "id": 1939,
+        "start_datetime": 1437483600000,
+        "end_datetime": 1437490800000
+      },
+      {
+        "id": 1940,
+        "start_datetime": 1437570000000,
+        "end_datetime": 1437577200000
+      },
+      {
+        "id": 1941,
+        "start_datetime": 1437656400000,
+        "end_datetime": 1437663600000
+      },
+      {
+        "id": 1942,
+        "start_datetime": 1437742800000,
+        "end_datetime": 1437750000000
+      },
+      {
+        "id": 1943,
+        "start_datetime": 1437829200000,
+        "end_datetime": 1437836400000
+      },
+      {
+        "id": 1944,
+        "start_datetime": 1438088400000,
+        "end_datetime": 1438095600000
+      },
+      {
+        "id": 1945,
+        "start_datetime": 1438174800000,
+        "end_datetime": 1438182000000
+      },
+      {
+        "id": 1946,
+        "start_datetime": 1438261200000,
+        "end_datetime": 1438268400000
+      },
+      {
+        "id": 1947,
+        "start_datetime": 1438347600000,
+        "end_datetime": 1438354800000
+      },
+      {
+        "id": 1948,
+        "start_datetime": 1438434000000,
+        "end_datetime": 1438441200000
+      },
+      {
+        "id": 1949,
+        "start_datetime": 1438693200000,
+        "end_datetime": 1438700400000
+      },
+      {
+        "id": 1950,
+        "start_datetime": 1438779600000,
+        "end_datetime": 1438786800000
+      },
+      {
+        "id": 1951,
+        "start_datetime": 1438866000000,
+        "end_datetime": 1438873200000
+      },
+      {
+        "id": 1952,
+        "start_datetime": 1438952400000,
+        "end_datetime": 1438959600000
+      },
+      {
+        "id": 1953,
+        "start_datetime": 1439038800000,
+        "end_datetime": 1439046000000
+      },
+      {
+        "id": 1954,
+        "start_datetime": 1439643600000,
+        "end_datetime": 1439650800000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 4056,
+    "lang": "en",
+    "title": "Restaurant Boat's dinner cruise",
+    "description": "A delicious dining experience with a thoroughly relaxing cruise.",
+    "contact_info": {
+      "id": 4223,
+      "address": "Laukontori",
+      "postcode": null,
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.ravintolalaiva.fi",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1426681951230,
+    "updated_at": 1432556776324,
+    "image": {
+      "item_id": 4146,
+      "src": "http://visittampere.fi/media/15d3a690-d2ea-11e4-9def-7f9a6b524531.jpg",
+      "title": "ravintolalaiva uusi.jpg"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "other-event"
+    ],
+    "is_free": false,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [
+      {
+        "id": 1695,
+        "start_datetime": 1431446400000,
+        "end_datetime": 1431457200000
+      },
+      {
+        "id": 1696,
+        "start_datetime": 1431532800000,
+        "end_datetime": 1431543600000
+      },
+      {
+        "id": 1697,
+        "start_datetime": 1431705600000,
+        "end_datetime": 1431716400000
+      },
+      {
+        "id": 1698,
+        "start_datetime": 1431792000000,
+        "end_datetime": 1431802800000
+      },
+      {
+        "id": 1699,
+        "start_datetime": 1432051200000,
+        "end_datetime": 1432062000000
+      },
+      {
+        "id": 1700,
+        "start_datetime": 1432137600000,
+        "end_datetime": 1432148400000
+      },
+      {
+        "id": 1701,
+        "start_datetime": 1432224000000,
+        "end_datetime": 1432234800000
+      },
+      {
+        "id": 1702,
+        "start_datetime": 1432396800000,
+        "end_datetime": 1432407600000
+      },
+      {
+        "id": 1703,
+        "start_datetime": 1432656000000,
+        "end_datetime": 1432666800000
+      },
+      {
+        "id": 1704,
+        "start_datetime": 1432742400000,
+        "end_datetime": 1432753200000
+      },
+      {
+        "id": 1705,
+        "start_datetime": 1432828800000,
+        "end_datetime": 1432839600000
+      },
+      {
+        "id": 1706,
+        "start_datetime": 1432915200000,
+        "end_datetime": 1432926000000
+      },
+      {
+        "id": 1707,
+        "start_datetime": 1433001600000,
+        "end_datetime": 1433012400000
+      },
+      {
+        "id": 1708,
+        "start_datetime": 1433260800000,
+        "end_datetime": 1433271600000
+      },
+      {
+        "id": 1709,
+        "start_datetime": 1433347200000,
+        "end_datetime": 1433358000000
+      },
+      {
+        "id": 1710,
+        "start_datetime": 1433520000000,
+        "end_datetime": 1433530800000
+      },
+      {
+        "id": 1711,
+        "start_datetime": 1433606400000,
+        "end_datetime": 1433617200000
+      },
+      {
+        "id": 1712,
+        "start_datetime": 1433865600000,
+        "end_datetime": 1433876400000
+      },
+      {
+        "id": 1713,
+        "start_datetime": 1433952000000,
+        "end_datetime": 1433962800000
+      },
+      {
+        "id": 1714,
+        "start_datetime": 1434038400000,
+        "end_datetime": 1434049200000
+      },
+      {
+        "id": 1715,
+        "start_datetime": 1434124800000,
+        "end_datetime": 1434135600000
+      },
+      {
+        "id": 1716,
+        "start_datetime": 1434211200000,
+        "end_datetime": 1434222000000
+      },
+      {
+        "id": 1717,
+        "start_datetime": 1434470400000,
+        "end_datetime": 1434481200000
+      },
+      {
+        "id": 1718,
+        "start_datetime": 1434556800000,
+        "end_datetime": 1434567600000
+      },
+      {
+        "id": 1719,
+        "start_datetime": 1434643200000,
+        "end_datetime": 1434654000000
+      },
+      {
+        "id": 1720,
+        "start_datetime": 1434729600000,
+        "end_datetime": 1434740400000
+      },
+      {
+        "id": 1721,
+        "start_datetime": 1434816000000,
+        "end_datetime": 1434826800000
+      },
+      {
+        "id": 1724,
+        "start_datetime": 1435075200000,
+        "end_datetime": 1435086000000
+      },
+      {
+        "id": 1723,
+        "start_datetime": 1435161600000,
+        "end_datetime": 1435172400000
+      },
+      {
+        "id": 1725,
+        "start_datetime": 1435248000000,
+        "end_datetime": 1435258800000
+      },
+      {
+        "id": 1726,
+        "start_datetime": 1435334400000,
+        "end_datetime": 1435345200000
+      },
+      {
+        "id": 1727,
+        "start_datetime": 1435420800000,
+        "end_datetime": 1435431600000
+      },
+      {
+        "id": 1728,
+        "start_datetime": 1435680000000,
+        "end_datetime": 1435690800000
+      },
+      {
+        "id": 1729,
+        "start_datetime": 1435766400000,
+        "end_datetime": 1435777200000
+      },
+      {
+        "id": 1730,
+        "start_datetime": 1435852800000,
+        "end_datetime": 1435863600000
+      },
+      {
+        "id": 1731,
+        "start_datetime": 1435939200000,
+        "end_datetime": 1435950000000
+      },
+      {
+        "id": 1732,
+        "start_datetime": 1436025600000,
+        "end_datetime": 1436036400000
+      },
+      {
+        "id": 1733,
+        "start_datetime": 1436284800000,
+        "end_datetime": 1436295600000
+      },
+      {
+        "id": 1734,
+        "start_datetime": 1436371200000,
+        "end_datetime": 1436382000000
+      },
+      {
+        "id": 1735,
+        "start_datetime": 1436457600000,
+        "end_datetime": 1436468400000
+      },
+      {
+        "id": 1736,
+        "start_datetime": 1436544000000,
+        "end_datetime": 1436554800000
+      },
+      {
+        "id": 1737,
+        "start_datetime": 1436630400000,
+        "end_datetime": 1436641200000
+      },
+      {
+        "id": 1738,
+        "start_datetime": 1436889600000,
+        "end_datetime": 1436900400000
+      },
+      {
+        "id": 1741,
+        "start_datetime": 1436976000000,
+        "end_datetime": 1436986800000
+      },
+      {
+        "id": 1742,
+        "start_datetime": 1437062400000,
+        "end_datetime": 1437073200000
+      },
+      {
+        "id": 1743,
+        "start_datetime": 1437148800000,
+        "end_datetime": 1437159600000
+      },
+      {
+        "id": 1744,
+        "start_datetime": 1437235200000,
+        "end_datetime": 1437246000000
+      },
+      {
+        "id": 1745,
+        "start_datetime": 1437494400000,
+        "end_datetime": 1437505200000
+      },
+      {
+        "id": 1746,
+        "start_datetime": 1437580800000,
+        "end_datetime": 1437591600000
+      },
+      {
+        "id": 1747,
+        "start_datetime": 1437667200000,
+        "end_datetime": 1437678000000
+      },
+      {
+        "id": 1748,
+        "start_datetime": 1437753600000,
+        "end_datetime": 1437764400000
+      },
+      {
+        "id": 1749,
+        "start_datetime": 1437840000000,
+        "end_datetime": 1437850800000
+      },
+      {
+        "id": 1750,
+        "start_datetime": 1438099200000,
+        "end_datetime": 1438110000000
+      },
+      {
+        "id": 1751,
+        "start_datetime": 1438185600000,
+        "end_datetime": 1438196400000
+      },
+      {
+        "id": 1752,
+        "start_datetime": 1438272000000,
+        "end_datetime": 1438282800000
+      },
+      {
+        "id": 1753,
+        "start_datetime": 1438358400000,
+        "end_datetime": 1438369200000
+      },
+      {
+        "id": 1754,
+        "start_datetime": 1438444800000,
+        "end_datetime": 1438455600000
+      },
+      {
+        "id": 1755,
+        "start_datetime": 1438704000000,
+        "end_datetime": 1438714800000
+      },
+      {
+        "id": 1756,
+        "start_datetime": 1438790400000,
+        "end_datetime": 1438801200000
+      },
+      {
+        "id": 1757,
+        "start_datetime": 1438876800000,
+        "end_datetime": 1438887600000
+      },
+      {
+        "id": 1758,
+        "start_datetime": 1438963200000,
+        "end_datetime": 1438974000000
+      },
+      {
+        "id": 1759,
+        "start_datetime": 1439049600000,
+        "end_datetime": 1439060400000
+      },
+      {
+        "id": 1761,
+        "start_datetime": 1439308800000,
+        "end_datetime": 1439319600000
+      },
+      {
+        "id": 1762,
+        "start_datetime": 1439395200000,
+        "end_datetime": 1439406000000
+      },
+      {
+        "id": 1763,
+        "start_datetime": 1439481600000,
+        "end_datetime": 1439492400000
+      },
+      {
+        "id": 1764,
+        "start_datetime": 1439568000000,
+        "end_datetime": 1439578800000
+      },
+      {
+        "id": 1765,
+        "start_datetime": 1439654400000,
+        "end_datetime": 1439665200000
+      },
+      {
+        "id": 1766,
+        "start_datetime": 1439913600000,
+        "end_datetime": 1439924400000
+      },
+      {
+        "id": 1767,
+        "start_datetime": 1440000000000,
+        "end_datetime": 1440010800000
+      },
+      {
+        "id": 1768,
+        "start_datetime": 1440086400000,
+        "end_datetime": 1440097200000
+      },
+      {
+        "id": 1769,
+        "start_datetime": 1440172800000,
+        "end_datetime": 1440183600000
+      },
+      {
+        "id": 1770,
+        "start_datetime": 1440259200000,
+        "end_datetime": 1440270000000
+      },
+      {
+        "id": 1771,
+        "start_datetime": 1440518400000,
+        "end_datetime": 1440529200000
+      },
+      {
+        "id": 1772,
+        "start_datetime": 1440604800000,
+        "end_datetime": 1440615600000
+      },
+      {
+        "id": 1773,
+        "start_datetime": 1440691200000,
+        "end_datetime": 1440702000000
+      },
+      {
+        "id": 1774,
+        "start_datetime": 1440777600000,
+        "end_datetime": 1440788400000
+      },
+      {
+        "id": 1776,
+        "start_datetime": 1440864000000,
+        "end_datetime": 1440874800000
+      },
+      {
+        "id": 1779,
+        "start_datetime": 1441209600000,
+        "end_datetime": 1441220400000
+      },
+      {
+        "id": 1781,
+        "start_datetime": 1441382400000,
+        "end_datetime": 1441393200000
+      },
+      {
+        "id": 1783,
+        "start_datetime": 1441468800000,
+        "end_datetime": 1441479600000
+      },
+      {
+        "id": 1784,
+        "start_datetime": 1441814400000,
+        "end_datetime": 1441825200000
+      },
+      {
+        "id": 1785,
+        "start_datetime": 1441987200000,
+        "end_datetime": 1441998000000
+      },
+      {
+        "id": 1786,
+        "start_datetime": 1442073600000,
+        "end_datetime": 1442084400000
+      },
+      {
+        "id": 1787,
+        "start_datetime": 1442419200000,
+        "end_datetime": 1442430000000
+      },
+      {
+        "id": 1788,
+        "start_datetime": 1442592000000,
+        "end_datetime": 1442602800000
+      },
+      {
+        "id": 1789,
+        "start_datetime": 1442678400000,
+        "end_datetime": 1442689200000
+      },
+      {
+        "id": 1790,
+        "start_datetime": 1443024000000,
+        "end_datetime": 1443034800000
+      },
+      {
+        "id": 1791,
+        "start_datetime": 1443196800000,
+        "end_datetime": 1443207600000
+      },
+      {
+        "id": 1792,
+        "start_datetime": 1443283200000,
+        "end_datetime": 1443294000000
+      },
+      {
+        "id": 1793,
+        "start_datetime": 1443628800000,
+        "end_datetime": 1443639600000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 15651,
+    "lang": "en",
+    "title": "Stable Yard´s Christmas",
+    "description": "The real Christmas spirit can be found in the Stable Yard´s Christmas market. Unique handicrafts, sweets and the Stable Yard´s animals.",
+    "contact_info": {
+      "id": 9815,
+      "address": "Kuninkaankatu 4",
+      "postcode": "33210",
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.tallipiha.fi/35",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1475835571208,
+    "updated_at": 1475835573653,
+    "image": {
+      "item_id": 3794,
+      "src": "http://visittampere.fi/media/2db02d00-c26a-11e4-8c3c-538c1302a45e.JPG",
+      "title": "tallipiha.JPG"
+    },
+    "start_datetime": 1510952400000,
+    "end_datetime": 1514066399999,
+    "type": "event",
+    "tags": [
+      "market"
+    ],
+    "is_free": true,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 15652,
+    "lang": "en",
+    "title": "St. Petersburg Fair at Stable Yards",
+    "description": "Tallipiha Stable Yards host the yearly St. Petersburg Fair that offers fun for the whole family! Stop by for a pony ride or to just enjoy live music, wonderful delicacies and the slavic atmosphere!",
+    "contact_info": {
+      "id": 9816,
+      "address": "Kuninkaankatu 4",
+      "postcode": "33210",
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://www.tallipiha.fi/35",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1475836553047,
+    "updated_at": 1475836560332,
+    "image": {
+      "item_id": 5615,
+      "src": "http://visittampere.fi/media/bc06a460-0925-11e5-8bef-13ca5f55aa3e.jpg",
+      "title": "tallipiha.jpg"
+    },
+    "start_datetime": null,
+    "end_datetime": null,
+    "type": "event",
+    "tags": [
+      "market"
+    ],
+    "is_free": true,
+    "ticket_link": null,
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": false,
+    "times": [
+      {
+        "id": 8432,
+        "start_datetime": 1503061200000,
+        "end_datetime": 1503075600000
+      },
+      {
+        "id": 8433,
+        "start_datetime": 1503126000000,
+        "end_datetime": 1503151200000
+      },
+      {
+        "id": 8434,
+        "start_datetime": 1503216000000,
+        "end_datetime": 1503237600000
+      }
+    ],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 15747,
+    "lang": "en",
+    "title": "Hockey Finnish Championship: Tappara - SaiPa",
+    "description": "In Hakametsä indoor Ice Stadium.",
+    "contact_info": {
+      "id": 9871,
+      "address": "Keltinkatu 2",
+      "postcode": "33520",
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://tappara.fi/liiga/ottelut/liiga-2016-17",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1476182104118,
+    "updated_at": 1476182157905,
+    "image": {
+      "item_id": 15251,
+      "src": "http://visittampere.fi/media/c778e050-7bdf-11e6-9b98-13b192b3d25a.JPG",
+      "title": "Tappara.JPG"
+    },
+    "start_datetime": 1489422600000,
+    "end_datetime": 1489442399999,
+    "type": "event",
+    "tags": [
+      "sports"
+    ],
+    "is_free": null,
+    "ticket_link": "http://www.ticketmaster.fi/artist/tappara-lippuja/96813",
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  },
+  {
+    "item_id": 15746,
+    "lang": "en",
+    "title": "Hockey Finnish Championship: Tappara - Pelicans",
+    "description": "In Hakametsä indoor Ice Stadium.",
+    "contact_info": {
+      "id": 9870,
+      "address": "Keltinkatu 2",
+      "postcode": "33520",
+      "city": "Tampere",
+      "country": null,
+      "phone": null,
+      "email": null,
+      "link": "http://tappara.fi/liiga/ottelut/liiga-2016-17",
+      "company_name": null,
+      "company_id": null,
+      "place_of_business": null
+    },
+    "created_at": 1476181975796,
+    "updated_at": 1476181977973,
+    "image": {
+      "item_id": 15251,
+      "src": "http://visittampere.fi/media/c778e050-7bdf-11e6-9b98-13b192b3d25a.JPG",
+      "title": "Tappara.JPG"
+    },
+    "start_datetime": 1489077000000,
+    "end_datetime": 1489096799999,
+    "type": "event",
+    "tags": [
+      "sports"
+    ],
+    "is_free": null,
+    "ticket_link": "http://www.ticketmaster.fi/artist/tappara-lippuja/96813",
+    "is_public": true,
+    "has_articles": false,
+    "single_datetime": true,
+    "times": [],
+    "form_contact_info": null,
+    "is_in_moderation": false
+  }
+]
