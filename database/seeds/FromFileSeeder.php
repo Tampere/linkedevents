@@ -89,8 +89,6 @@ class FromFileSeeder extends Seeder
         foreach($subEvents as $subEvent) {
             array_push($events, $subEvent);
         }
-
-        //$this->convertTicketInfoToOfferAndAttachItToEvent($event, $events);
     }
 
     /**
@@ -101,7 +99,7 @@ class FromFileSeeder extends Seeder
     {
         $keywordIds = [];
         foreach($tags as $tag) {
-            $keywordId = Keywords::getOrCreateKeywordId($tag, 'visittampere');
+            $keywordId = Keywords::getOrCreateKeywordId($tag, 'visittampere', $this->lang);
             array_push($keywordIds, $keywordId);
         }
         return $keywordIds;
@@ -139,21 +137,6 @@ class FromFileSeeder extends Seeder
         $newevent->keywords()->attach($keywordIds);
 
         return $newevent;
-    }
-
-    private function convertTicketInfoToOfferAndAttachItToEvent($original, $events)
-    {
-        foreach($events as $event)
-        {
-            Offer::create([
-                'info_url' => $original->ticket_link,
-                'info_url_tr' => $original->ticket_link ? json_encode([
-                    $this->lang => $original->ticket_link,
-                ]) : null,
-                'is_free' => $original->is_free === null ? false : $original->is_free,
-                'event_id' => $event->id
-            ]);
-        }
     }
 
     private function createSubEvents($event, $original)

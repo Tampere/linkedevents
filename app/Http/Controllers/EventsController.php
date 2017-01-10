@@ -21,7 +21,7 @@ class EventsController extends Controller
 
     public function index()
     {
-        $events = Event::with('location')->paginate(5);
+        $events = Event::with(['location', 'offer', 'keywords'])->paginate(25);
 
         return $this->respond([
             'meta' => [

@@ -18,13 +18,13 @@ class Keywords extends Model
         return $this->belongsToMany(Event::class);
     }
 
-    public static function getOrCreateKeywordId($tag, $context)
+    public static function getOrCreateKeywordId($tag, $context, $lang)
     {
         $keyword = self::firstOrNew(['name' => $tag]);
         if(!$keyword->exists) {
             $keyword->id = "$context:$tag";
             $keyword->name_tr = json_encode([
-                'fi' => $tag,
+                $lang => $tag,
             ]);
             $keyword->data_source_id = $context;
             $keyword->save();

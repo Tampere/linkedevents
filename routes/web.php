@@ -19,3 +19,6 @@ Route::get('event/{id}', 'EventsController@show');
 
 Route::get('keyword', 'KeywordsController@index');
 Route::get('keyword/{id}', 'KeywordsController@show');
+
+Route::get('place', 'PlacesController@index');
+Route::get('place/{id}', 'PlacesController@show');

@@ -47,6 +47,11 @@ class Event extends Model
         return $this->hasOne(Event::class, 'id', 'super_event_id');
     }
 
+    public function offer()
+    {
+        return $this->hasOne(Offer::class, 'id', 'offer_id');
+    }
+
     public function getSuperEventIdAttribute($id)
     {
         if($id === null) return $id;
