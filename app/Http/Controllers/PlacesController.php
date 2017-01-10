@@ -9,6 +9,10 @@ class PlacesController extends Controller
 {
     protected $transformer;
 
+    /**
+     * PlacesController constructor.
+     * @param PlaceTransformer $transformer
+     */
     public function __construct(PlaceTransformer $transformer)
     {
         $this->transformer = $transformer;

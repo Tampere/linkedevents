@@ -14,6 +14,10 @@ class EventsController extends Controller
      */
     protected $eventTransformer;
 
+    /**
+     * EventsController constructor.
+     * @param EventTransformer $eventTransformer
+     */
     public function __construct(EventTransformer $eventTransformer)
     {
         $this->eventTransformer = $eventTransformer;
@@ -21,8 +25,8 @@ class EventsController extends Controller
 
     public function index()
     {
-        $events = Event::with(['location', 'offer', 'keywords'])->paginate(25);
-
+        $events = Event::with(['location', 'offer', 'keywords'])->startsAt()->endsAt()->paginate(25);
+        
         return $this->respond([
             'meta' => [
                 'count' => $events->total(),

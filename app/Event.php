@@ -2,10 +2,14 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Event extends Model
 {
+    use Searchable;
+
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $casts = [
@@ -59,5 +63,50 @@ class Event extends Model
         return [
             '@id' => url('/event/' . $id)
         ];
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeStartsAt($query)
+    {
+        if(request('start')) {
+            return $query->where(
+                'start_time',
+                '>=',
+                request('start') == 'today' ?
+                    Carbon::now()->endOfDay()
+                    : request('start'));
+        }
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeEndsAt($query)
+    {
+        if(request('end')) {
+            return $query->where(
+                'end_time',
+                '<=',
+                request('end') == 'today' ?
+                    Carbon::now()->endOfDay()
+                    : request('end')
+            );
+        }
+    }
+
+    /**
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        // Limit array somehow
+
+        return $array;
     }
 }

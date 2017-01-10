@@ -9,6 +9,10 @@ class KeywordsController extends Controller
 {
     protected $transformer;
 
+    /**
+     * KeywordsController constructor.
+     * @param KeywordTransformer $transformer
+     */
     public function __construct(KeywordTransformer $transformer)
     {
         $this->transformer = $transformer;
