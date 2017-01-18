@@ -22,3 +22,5 @@ Route::get('keyword/{id}', 'KeywordsController@show');
 
 Route::get('place', 'PlacesController@index');
 Route::get('place/{id}', 'PlacesController@show');
+
+Route::get('search/', 'SearchController@index');

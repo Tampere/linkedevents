@@ -26,7 +26,7 @@ class EventsController extends Controller
     public function index()
     {
         $events = Event::with(['location', 'offer', 'keywords'])->startsAt()->endsAt()->paginate(25);
-        
+
         return $this->respond([
             'meta' => [
                 'count' => $events->total(),

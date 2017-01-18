@@ -14,7 +14,7 @@ class HomeController extends Controller
             //"organization" => url('organization'),
             //"image" => url('image'),
             "event" => url('event'),
-            //"search" => url('search'),
+            "search" => url('search'),
             //"user" => url('user')
         ];
     }

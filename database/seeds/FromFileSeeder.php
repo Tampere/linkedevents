@@ -87,8 +87,12 @@ class FromFileSeeder extends Seeder
         }
 
         foreach($subEvents as $subEvent) {
-            array_push($events, $subEvent);
+            $subEvent->keywords()->attach($keywordIds);
         }
+
+        /*foreach($subEvents as $subEvent) {
+            array_push($events, $subEvent);
+        }*/
     }
 
     /**
