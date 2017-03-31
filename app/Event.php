@@ -127,6 +127,17 @@ class Event extends Model
         return array_merge($array, $extra_data);*/
 //        return $array->toArray();
 
-        return $this->toArray();
+        //return $this->toArray();
+
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'info_url' => $this->info_url,
+            'description' => $this->description,
+            'short_description' => $this->short_description,
+            'headline' => $this->headline,
+            'secondary_headline' => $this->secondary_headline,
+            'location_extra_info' => $this->location_extra_info,
+        ];
     }
 }
