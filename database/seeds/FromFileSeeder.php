@@ -18,21 +18,55 @@ class FromFileSeeder extends Seeder
      */
     public function run()
     {
-        $json = file_get_contents("database/seeddata/10events.json");
+        $startTime = microtime(true);
+        $this->command->info("Begin import at {$startTime}");
+        //$json = file_get_contents("database/seeddata/10events.json");
+        $json = file_get_contents("https://visittampere.fi/api/search?type=event&limit=20000");
         $data = json_decode($json);
+
+        switch (json_last_error()) {
+            case JSON_ERROR_NONE:
+                echo ' - No errors';
+                break;
+            case JSON_ERROR_DEPTH:
+                echo ' - Maximum stack depth exceeded';
+                break;
+            case JSON_ERROR_STATE_MISMATCH:
+                echo ' - Underflow or the modes mismatch';
+                break;
+            case JSON_ERROR_CTRL_CHAR:
+                echo ' - Unexpected control character found';
+                break;
+            case JSON_ERROR_SYNTAX:
+                echo ' - Syntax error, malformed JSON';
+                break;
+            case JSON_ERROR_UTF8:
+                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+                break;
+            default:
+                echo ' - Unknown error';
+                break;
+        }
+
+        $this->command->info('JSON is valid!');
+
         foreach($data as $event) {
             if($this->eventExists($event)) {
+                $this->command->info("Event exists 'visittampere:$event->item_id'");
                 Log::info("Event exists 'visittampere:$event->item_id'");
                 if($this->eventNeedsUpdate($event)) {
+                    $this->command->info("Event needs update 'visittampere:$event->item_id'");
                     Log::info("Event needs update 'visittampere:$event->item_id'");
                     $this->updateEvent($event);
                 } else {
                     continue;
                 }
             }
+            $this->command->info("Creating a new event 'visittampere:$event->item_id'");
             Log::info("Creating a new event 'visittampere:$event->item_id'");
             $this->parseEvent($event);
         }
+        $this->command->info("Elapsed time is: ". (microtime(true) - $startTime) ." seconds");
     }
 
     protected function parseEvent($event)
@@ -127,7 +161,7 @@ class FromFileSeeder extends Seeder
             'has_start_time' => !is_null($event->start_datetime),
             'has_end_time' => !is_null($event->end_datetime),
             'date_published' => is_null($event->created_at) ? null : substr($event->created_at, 0, -3),
-            'image' => $event->image ? $event->image->src : null,
+            'image' => isset($event->image) ? $event->image->src : null,
             'is_recurring_super' => $isRecurringSuper,
             'place_id' => $place_id,
             'info_url' => $event->contact_info->link,

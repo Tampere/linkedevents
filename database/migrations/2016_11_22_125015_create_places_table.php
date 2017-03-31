@@ -15,10 +15,10 @@ class CreatePlacesTable extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->string('id', 50);
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->text('name_tr')->nullable();
             $table->integer('origin_id')->unsigned()->nullable();
-            $table->string('info_url', 200);
+            $table->string('info_url', 200)->nullable();
             $table->text('info_url_tr')->nullable();
             $table->text('description')->nullable();
             $table->text('description_tr')->nullable();
