@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Log;
 
 class FromFileSeeder extends Seeder
 {
-    protected $lang = "fi";
-
     protected $langs = [
         'fi',
         'en',
@@ -135,7 +133,7 @@ class FromFileSeeder extends Seeder
     {
         $keywordIds = [];
         foreach($tags as $tag) {
-            $keywordId = Keywords::getOrCreateKeywordId($tag, 'visittampere', $this->lang);
+            $keywordId = Keywords::getOrCreateKeywordId($tag, 'visittampere');
             array_push($keywordIds, $keywordId);
         }
         return $keywordIds;
