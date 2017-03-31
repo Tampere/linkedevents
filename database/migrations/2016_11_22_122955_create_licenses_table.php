@@ -16,7 +16,7 @@ class CreateLicensesTable extends Migration
         Schema::create('licenses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->json('name_tr')->nullable();
+            $table->text('name_tr')->nullable();
             $table->string('url', 200);
             $table->timestamps();
         });

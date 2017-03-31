@@ -16,7 +16,7 @@ class CreateKeywordsTable extends Migration
         Schema::create('keywords', function (Blueprint $table) {
             $table->string('id', 50);
             $table->string('name');
-            $table->json('name_tr')->nullable();
+            $table->text('name_tr')->nullable();
             $table->string('origin_id', 50)->nullable();
             $table->boolean('aggregate')->default(false);
             $table->string('data_source_id', 50)->nullable();

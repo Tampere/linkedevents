@@ -16,21 +16,21 @@ class CreatePlacesTable extends Migration
         Schema::create('places', function (Blueprint $table) {
             $table->string('id', 50);
             $table->string('name');
-            $table->json('name_tr')->nullable();
+            $table->text('name_tr')->nullable();
             $table->integer('origin_id')->unsigned()->nullable();
             $table->string('info_url', 200);
-            $table->json('info_url_tr')->nullable();
+            $table->text('info_url_tr')->nullable();
             $table->text('description')->nullable();
-            $table->json('description_tr')->nullable();
+            $table->text('description_tr')->nullable();
             $table->string('position')->nullable();
             $table->string('email', 254)->nullable();
             $table->string('telephone', 128)->nullable();
-            $table->json('telephone_tr')->nullable();
+            $table->text('telephone_tr')->nullable();
             $table->string('contact_type')->nullable();
             $table->string('street_address')->nullable();
-            $table->json('street_address_tr')->nullable();
+            $table->text('street_address_tr')->nullable();
             $table->string('address_locality')->nullable();
-            $table->json('address_locality_tr')->nullable();
+            $table->text('address_locality_tr')->nullable();
             $table->string('address_region')->nullable();
             $table->string('postal_code', 128)->nullable();
             $table->string('post_office_box_num', 128)->nullable();
