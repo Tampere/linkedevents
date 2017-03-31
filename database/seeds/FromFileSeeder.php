@@ -10,7 +10,16 @@ use Illuminate\Support\Facades\Log;
 
 class FromFileSeeder extends Seeder
 {
-    protected $lang = "en";
+    protected $lang = "fi";
+
+    protected $langs = [
+        'fi',
+        'en',
+        'ru'
+    ];
+
+    protected $data = [];
+
     /**
      * Run the database seeds.
      *
@@ -20,9 +29,10 @@ class FromFileSeeder extends Seeder
     {
         $startTime = microtime(true);
         $this->command->info("Begin import at {$startTime}");
-        //$json = file_get_contents("database/seeddata/10events.json");
-        $json = file_get_contents("https://visittampere.fi/api/search?type=event&limit=20000");
-        $data = json_decode($json);
+        foreach($this->langs as $lang) {
+            $json[$lang] = file_get_contents("https://visittampere.fi/api/search?type=event&limit=20000&lang={$lang}");
+            $this->data[$lang] = json_decode($json[$lang]);
+        }
 
         switch (json_last_error()) {
             case JSON_ERROR_NONE:
@@ -50,21 +60,23 @@ class FromFileSeeder extends Seeder
 
         $this->command->info('JSON is valid!');
 
-        foreach($data as $event) {
-            if($this->eventExists($event)) {
-                $this->command->info("Event exists 'visittampere:$event->item_id'");
-                Log::info("Event exists 'visittampere:$event->item_id'");
-                if($this->eventNeedsUpdate($event)) {
-                    $this->command->info("Event needs update 'visittampere:$event->item_id'");
-                    Log::info("Event needs update 'visittampere:$event->item_id'");
-                    $this->updateEvent($event);
-                } else {
-                    continue;
+        foreach($this->langs as $lang) {
+            foreach ($this->data[$lang] as $event) {
+                if ($this->eventExists($event)) {
+                    $this->command->info("Event exists 'visittampere:$event->item_id'");
+                    Log::info("Event exists 'visittampere:$event->item_id', updating");
+                    if ($this->eventNeedsUpdate($event)) {
+                        $this->command->info("Event needs update 'visittampere:$event->item_id'");
+                        Log::info("Event needs update 'visittampere:$event->item_id'");
+                        $this->updateEvent($event);
+                    } else {
+                        continue;
+                    }
                 }
+                $this->command->info("Creating a new event 'visittampere:$event->item_id'");
+                Log::info("Creating a new event 'visittampere:$event->item_id'");
+                $this->parseEvent($event);
             }
-            $this->command->info("Creating a new event 'visittampere:$event->item_id'");
-            Log::info("Creating a new event 'visittampere:$event->item_id'");
-            $this->parseEvent($event);
         }
         $this->command->info("Elapsed time is: ". (microtime(true) - $startTime) ." seconds");
     }
@@ -83,33 +95,23 @@ class FromFileSeeder extends Seeder
         $place = Place::forceCreate([
             'id' => 'visittampere:'.$event->item_id,
             'name' => $event->contact_info->address,
-            'name_tr' => json_encode([
-                $this->lang => $event->contact_info->address
-            ]),
+            'name_tr' => $this->getRepeatingTranslatedJson($event->contact_info->address),
             'street_address' => $event->contact_info->address,
-            'street_address_tr' => json_encode([
-                $this->lang => $event->contact_info->address
-            ]),
+            'street_address_tr' => $this->getRepeatingTranslatedJson($event->contact_info->address),
             'postal_code' => $event->contact_info->postcode,
             'address_region' => $event->contact_info->city,
             'telephone' => $event->contact_info->phone,
-            'telephone_tr' => $event->contact_info->phone ? json_encode([
-                $this->lang => $event->contact_info->phone,
-            ]) : null,
+            'telephone_tr' => $event->contact_info->phone ? $this->getRepeatingTranslatedJson($event->contact_info->phone) : null,
             'email' => $event->contact_info->email,
             'info_url' => $event->contact_info->link,
-            'info_url_tr' => $event->contact_info->link ? json_encode([
-                $this->lang => $event->contact_info->link,
-            ]) : null,
+            'info_url_tr' => $event->contact_info->link ? $this->getRepeatingTranslatedJson($event->contact_info->link) : null,
             'data_source_id' => 'visittampere'
         ]);
 
         //Generate offers
         $offer = Offer::create([
             'info_url' => $event->ticket_link,
-            'info_url_tr' => $event->ticket_link ? json_encode([
-                $this->lang => $event->ticket_link,
-            ]) : null,
+            'info_url_tr' => $event->ticket_link ? $this->getRepeatingTranslatedJson($event->ticket_link) : null,
             'is_free' => $event->is_free === null ? false : $event->is_free,
         ]);
 
@@ -123,10 +125,6 @@ class FromFileSeeder extends Seeder
         foreach($subEvents as $subEvent) {
             $subEvent->keywords()->attach($keywordIds);
         }
-
-        /*foreach($subEvents as $subEvent) {
-            array_push($events, $subEvent);
-        }*/
     }
 
     /**
@@ -143,19 +141,43 @@ class FromFileSeeder extends Seeder
         return $keywordIds;
     }
 
+    private function getTranslatedJson($item_id, $column)
+    {
+        $str = '{';
+        foreach($this->langs as $lang) {
+            foreach ($this->data[$lang] as $otherevent) {
+                if ($otherevent->item_id == $item_id) {
+                    $str .= '"'.$lang.'":"'.$otherevent->$column.'",';
+                }
+            }
+        }
+        $str = substr($str, 0, -1);
+        $str .= '}';
+
+        return $str;
+    }
+
+    private function getRepeatingTranslatedJson($link)
+    {
+        $str = '{';
+        foreach($this->langs as $lang) {
+            $str .= '"'.$lang.'":"'.$link.'",';
+        }
+        $str = substr($str, 0, -1);
+        $str .= '}';
+
+        return $str;
+    }
+
     private function createSingleEvent($event, $keywordIds, $isRecurringSuper, $place_id, $offer_id)
     {
         $newevent = new Event;
         $newevent->fill([
             'id' => "visittampere:$event->item_id",
             'name' => $event->title,
-            'name_tr' => json_encode([
-                $this->lang => $event->title
-            ]),
+            'name_tr' => $this->getTranslatedJson($event->item_id, 'title'),
             'description' => $event->description,
-            'description_tr' => json_encode([
-                $this->lang => $event->description
-            ]),
+            'description_tr' => $this->getTranslatedJson($event->item_id, 'description'),
             'start_time' => is_null($event->start_datetime) ? null : substr($event->start_datetime, 0, -3),
             'end_time' => is_null($event->end_datetime) ? null : substr($event->end_datetime, 0, -3),
             'has_start_time' => !is_null($event->start_datetime),
@@ -165,9 +187,7 @@ class FromFileSeeder extends Seeder
             'is_recurring_super' => $isRecurringSuper,
             'place_id' => $place_id,
             'info_url' => $event->contact_info->link,
-            'info_url_tr' => $event->contact_info->link ? json_encode([
-                $this->lang => $event->contact_info->link,
-            ]) : null,
+            'info_url_tr' => $event->contact_info->link ? $this->getRepeatingTranslatedJson($event->contact_info->link) : null,
             'offer_id' => $offer_id,
         ]);
 

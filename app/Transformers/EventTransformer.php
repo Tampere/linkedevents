@@ -12,6 +12,7 @@ class EventTransformer extends Transformer
             '@type' => 'Event/LinkedEvent',
             'location' => $this->transformLocation($item->location),
             'name' => json_decode($item->name_tr),
+            'name_tr' => $item->name_tr,
             'description' => json_decode($item->description_tr),
             'super_event' => $item->super_event_id,
             'last_modified_time' => is_null($item->updated_at) ? null : $item->updated_at->toIso8601String(),
