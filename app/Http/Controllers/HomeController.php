@@ -6,7 +6,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return [
+        return view('slate');
+        /*return [
             "keyword" => url('keyword'),
             //"keyword_set" => url('keyword_set'),
             "place" => url('place'),
@@ -16,6 +17,6 @@ class HomeController extends Controller
             "event" => url('event'),
             "search" => url('search'),
             //"user" => url('user')
-        ];
+        ];*/
     }
 }
