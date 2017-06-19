@@ -7,3 +7,4 @@ Homestead.json
 Homestead.yaml
 .env
 storage/events.index
+public/.DS_Store
