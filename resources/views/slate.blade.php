@@ -230,15 +230,15 @@
 
         <p>Aggregates data about events around the city</p>
 
-        <p>API location (this page): <a href="http://178.217.128.133/">http://178.217.128.133/</a></p>
+        <p>API location (this page): <a href="http://api.tampere.fi/">http://api.tampere.fi/</a></p>
 
         <p>API endpoints:</p>
 
         <ul>
-            <li><a href="http://178.217.128.133/event">http://178.217.128.133/event</a></li>
-            <li><a href="http://178.217.128.133/keyword">http://178.217.128.133/keyword</a></li>
-            <li><a href="http://178.217.128.133/place">http://178.217.128.133/place</a></li>
-            <li><a href="http://178.217.128.133/search">http://178.217.128.133/search</a></li>
+            <li><a href="http://api.tampere.fi/event">http://api.tampere.fi/event</a></li>
+            <li><a href="http://api.tampere.fi/keyword">http://api.tampere.fi/keyword</a></li>
+            <li><a href="http://api.tampere.fi/place">http://api.tampere.fi/place</a></li>
+            <li><a href="http://api.tampere.fi/search">http://api.tampere.fi/search</a></li>
         </ul>
 
         <p>Linked Events provides categorized data on events and places for Tampere region. The API contains all event data from the Visit Tampere API. In addition, Linked Events will be containing all suitable event data from Menovinkki.</p>
@@ -252,10 +252,10 @@
         <h1 id="events">Events</h1>
 
         <h2 id="get-all-events">Get All Events</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/event"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/event"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/event'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/event'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -263,19 +263,19 @@
         <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">803</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/event?page=2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/event?page=2"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
     </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:10685"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/event/visittampere:10685"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/event/visittampere:10685"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event/LinkedEvent"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:10685"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/place/visittampere:10685"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/place/visittampere:10685"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -329,7 +329,7 @@
                         </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"festival"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"ru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"festival"</span><span class="w">
                     </span><span class="p">},</span><span class="w">
-                    </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/keyword/visittampere:festival"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/keyword/visittampere:festival"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keyword"</span><span class="w">
                 </span><span class="p">}</span><span class="w">
@@ -344,7 +344,7 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/event</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/event</code></p>
 
         <h3 id="query-parameters">Query Parameters</h3>
 
@@ -367,10 +367,10 @@
         </aside>
 
         <h2 id="get-a-specific-event">Get a Specific Event</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/event/visittampere:1754"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/event/visittampere:1754"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/event/visittampere:1754'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/event/visittampere:1754'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -378,12 +378,12 @@
         <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:1754"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/event/visittampere:1754"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/event/visittampere:1754"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event/LinkedEvent"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:4056"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/place/visittampere:4056"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/place/visittampere:4056"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -409,7 +409,7 @@
             </span><span class="s2">"ru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Традиционный ланч из финских лакомств и расслабляющй круиз по озеру"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"super_event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/event/visittampere:4056"</span><span class="w">
+            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/event/visittampere:4056"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"last_modified_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-31T13:22:57+0000"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"info_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -437,7 +437,7 @@
                     </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"other-event"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"ru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"other-event"</span><span class="w">
                 </span><span class="p">},</span><span class="w">
-                </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/keyword/visittampere:other-event"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/keyword/visittampere:other-event"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keyword"</span><span class="w">
             </span><span class="p">}</span><span class="w">
@@ -453,7 +453,7 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/event/&lt;ID&gt;</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/event/&lt;ID&gt;</code></p>
 
         <h3 id="url-parameters">URL Parameters</h3>
 
@@ -476,10 +476,10 @@
         <h1 id="places">Places</h1>
 
         <h2 id="get-all-places">Get All Places</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/place"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/place"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/place'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/place'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -487,13 +487,13 @@
         <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">244</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/place?page=2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/place?page=2"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:11035"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/place/visittampere:11035"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/place/visittampere:11035"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -517,7 +517,7 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/place</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/place</code></p>
 
         <aside class="info">
             As there currently is no place registry, all events have a one-to-one relation to a place object even if the place information currently is the same between two or more events. This is because the origin API does not share place objects and we must retain the option to modify one events place information without affecting the other events.
@@ -528,10 +528,10 @@
         </aside>
 
         <h2 id="get-a-specific-place">Get a Specific Place</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/place/visittampere:11035"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/place/visittampere:11035"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/place/visittampere:11035'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/place/visittampere:11035'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -539,7 +539,7 @@
         <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visittampere:11035"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/place/visittampere:11035"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/place/visittampere:11035"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -562,7 +562,7 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/place/&lt;ID&gt;</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/place/&lt;ID&gt;</code></p>
 
         <h3 id="url-parameters">URL Parameters</h3>
 
@@ -581,10 +581,10 @@
         <h1 id="keywords">Keywords</h1>
 
         <h2 id="get-all-keywords">Get All Keywords</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/keyword"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/keyword"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/keyword'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/keyword'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -605,7 +605,7 @@
                 </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"business"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"ru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"business"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/keyword/visittampere:business"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/keyword/visittampere:business"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keyword"</span><span class="w">
         </span><span class="p">}</span><span class="w">
@@ -616,13 +616,13 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/keyword</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/keyword</code></p>
 
         <h2 id="get-a-specific-keyword">Get a Specific Keyword</h2>
-        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://178.217.128.133/keyword/visittampere:business"</span>
+        <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.tampere.fi/keyword/visittampere:business"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'axios'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://178.217.128.133/keyword/visittampere:business'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://api.tampere.fi/keyword/visittampere:business'</span><span class="p">);</span>
 </code></pre>
         <blockquote>
             <p>The above command returns JSON-LD structured like this:</p>
@@ -637,7 +637,7 @@
             </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"business"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"ru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"business"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://178.217.128.133/keyword/visittampere:business"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.tampere.fi/keyword/visittampere:business"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keyword"</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -647,7 +647,7 @@
 
         <h3 id="http-request">HTTP Request</h3>
 
-        <p><code class="prettyprint">GET http://178.217.128.133/keyword/&lt;ID&gt;</code></p>
+        <p><code class="prettyprint">GET http://api.tampere.fi/keyword/&lt;ID&gt;</code></p>
 
         <h3 id="url-parameters">URL Parameters</h3>
 
