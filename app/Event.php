@@ -98,37 +98,21 @@ class Event extends Model
         }
     }
 
+    public function scopeKeywords($query)
+    {
+        if(request('keyword')) {
+            $query->whereHas('keywords', function($q) {
+                $keywords = explode(',', request('keyword'));
+                $q->whereIn('keywords.id', $keywords);
+            });
+        }
+    }
+
     /**
      * @return array
      */
     public function toSearchableArray()
     {
-        /*$array = $this->pluck(
-            'name', 'name_tr',
-            'info_url', 'info_url_tr',
-            'description', 'description_tr',
-            'short_description', 'short_description_tr'
-        );*/
-
-        /*$extra_data = [];
-        $extra_data['location'] = array_map(function ($data) {
-            return [
-                $data['name'],
-                $data['name_tr'],
-                $data['info_url'],
-                $data['info_url_tr'],
-                $data['street_address'],
-                $data['street_address_tr'],
-                $data['address_region'],
-                $data['postal_code'],
-            ];
-        }, $this->location->toArray());
-
-        return array_merge($array, $extra_data);*/
-//        return $array->toArray();
-
-        //return $this->toArray();
-
         return [
             'id' => $this->id,
             'name' => $this->name,
