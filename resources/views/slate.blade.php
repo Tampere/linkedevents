@@ -360,7 +360,26 @@
                 <td>1</td>
                 <td>Chuck of paginated results</td>
             </tr>
+            <tr>
+                <td>start</td>
+                <td>null</td>
+                <td>Event start at. yyyy-mm-dd or today</td>
+            </tr>
+            <tr>
+                <td>end</td>
+                <td>null</td>
+                <td>Event end at. yyyy-mm-dd or today</td>
+            </tr>
+            <tr>
+                <td>keyword</td>
+                <td>null</td>
+                <td>Event keyword(s). To restrict the retrieved events by category, use the query parameter keyword, separating values by commas if you wish to query for several keywords. Keyword ids are found at the keyword endpoint.</td>
+            </tr>
             </tbody></table>
+
+        <aside class="warning">
+            As there currently is no place registry, geo-search or location-based search is not possible.
+        </aside>
 
         <aside class="info">
             Default pagination length is 25 event objects.
