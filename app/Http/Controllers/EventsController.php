@@ -32,11 +32,15 @@ class EventsController extends Controller
             ->endsAt()
             ->paginate(25);
 
+        $parameters = (request('start') ? '&start='.request('start') : '') .
+            (request('end') ? '&end='.request('end') : '') .
+            (request('keyword') ? '&keyword='.request('keyword') : '');
+
         return $this->respond([
             'meta' => [
                 'count' => $events->total(),
-                'next' => $events->nextPageUrl(),
-                'previous' => $events->previousPageUrl()
+                'next' => $events->nextPageUrl() ? $events->nextPageUrl() . $parameters : null,
+                'previous' => $events->previousPageUrl() ? $events->previousPageUrl() . $parameters : null,
             ],
             'data' => $this->eventTransformer->transformCollection($events->all())
         ]);
