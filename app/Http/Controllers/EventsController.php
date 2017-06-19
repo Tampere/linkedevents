@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Keywords;
 use Illuminate\Http\Request;
 use Transformers\EventTransformer;
 
@@ -25,7 +26,11 @@ class EventsController extends Controller
 
     public function index()
     {
-        $events = Event::with(['location', 'offer', 'keywords'])->startsAt()->endsAt()->paginate(25);
+        $events = Event::with(['location', 'offer', 'keywords'])
+            ->keywords()
+            ->startsAt()
+            ->endsAt()
+            ->paginate(25);
 
         return $this->respond([
             'meta' => [
