@@ -30,6 +30,7 @@ class EventsController extends Controller
             ->keywords()
             ->startsAt()
             ->endsAt()
+            ->orderBy('start_time', 'desc')
             ->paginate(25);
 
         $parameters = (request('start') ? '&start='.request('start') : '') .
