@@ -15,25 +15,17 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->string('id', 50);
-            $table->string('name');
-            $table->text('name_tr')->nullable();
+            $table->text('name')->nullable();
             $table->string('origin_id', 50)->nullable();
-            $table->string('info_url', 200)->nullable();
-            $table->text('info_url_tr')->nullable();
+            $table->text('info_url')->nullable();
             $table->text('description')->nullable();
-            $table->text('description_tr')->nullable();
             $table->text('short_description')->nullable();
-            $table->text('short_description_tr')->nullable();
             $table->timestamp('date_published')->nullable();
-            $table->string('headline')->nullable();
-            $table->text('headline_tr')->nullable();
-            $table->string('secondary_headline')->nullable();
-            $table->text('secondary_headline_tr')->nullable();
-            $table->string('provider')->nullable();
-            $table->text('provider_tr')->nullable();
+            $table->text('headline')->nullable();
+            $table->text('secondary_headline')->nullable();
+            $table->text('provider')->nullable();
             $table->tinyInteger('event_status', false, true)->nullable();
-            $table->string('location_extra_info')->nullable();
-            $table->text('location_extra_info_tr')->nullable();
+            $table->text('location_extra_info')->nullable();
             $table->timestamp('start_time')->nullable();
             $table->timestamp('end_time')->nullable();
             $table->boolean('has_start_time')->default(true);

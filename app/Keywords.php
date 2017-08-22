@@ -10,7 +10,7 @@ class Keywords extends Model
     public $incrementing = false;
 
     protected $casts = [
-        'name_tr' => 'json'
+        'name' => 'json'
     ];
 
     protected static $langs = [

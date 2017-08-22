@@ -1,19 +1,11 @@
 <?php
 
+use App\Event;
+use App\Keywords;
+use App\Offer;
+use App\Place;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        $this->call(EventsSeeder::class);
-    }
-}
 
 class EventsSeeder extends Seeder
 {
@@ -36,10 +28,15 @@ class EventsSeeder extends Seeder
         $startTime = microtime(true);
         $this->command->info("Begin import at {$startTime}");
 
+        $bar = $this->output->createProgressBar(count($this->langs));
+
         foreach($this->langs as $lang) {
             $json[$lang] = file_get_contents("https://visittampere.fi/api/search?type=event&limit=20000&lang={$lang}");
             $this->data[$lang] = json_decode($json[$lang]);
+            $bar->advance();
         }
+
+        $bar->finish();
 
         switch (json_last_error()) {
             case JSON_ERROR_NONE:

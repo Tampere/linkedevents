@@ -11,11 +11,11 @@ class EventTransformer extends Transformer
             '@context' => 'http://schema.org',
             '@type' => 'Event/LinkedEvent',
             'location' => $this->transformLocation($item->location),
-            'name' => json_decode($item->name_tr),
-            'description' => json_decode($item->description_tr),
+            'name' => json_decode($item->name),
+            'description' => json_decode($item->description),
             'super_event' => $item->super_event_id,
             'last_modified_time' => is_null($item->updated_at) ? null : $item->updated_at->toIso8601String(),
-            'info_url' => json_decode($item->info_url_tr),
+            'info_url' => json_decode($item->info_url),
             'date_published' => is_null($item->date_published) ? null : $item->date_published->toIso8601String(),
             'image' => $item->image,
             'offers' => [
@@ -50,8 +50,8 @@ class EventTransformer extends Transformer
             '@id' => url('/place/' . $location->id),
             '@context' => 'http://schema.org',
             '@type' => 'Place',
-            'name' => json_decode($location->name_tr),
-            'street_address' => json_decode($location->street_address_tr),
+            'name' => json_decode($location->name),
+            'street_address' => json_decode($location->street_address),
             'address_region' => $location->address_region,
             'postal_code' => $location->postal_code,
             'data_source_id' => $location->data_source_id,
@@ -64,9 +64,9 @@ class EventTransformer extends Transformer
     {
         $payload = [
             'is_free' => (boolean)$offer->is_free,
-            'description' => json_decode($offer->description_tr),
-            'price' => json_decode($offer->price_tr),
-            'info_url' => json_decode($offer->info_url_tr)
+            'description' => json_decode($offer->description),
+            'price' => json_decode($offer->price),
+            'info_url' => json_decode($offer->info_url)
         ];
 
         return $payload;
@@ -90,7 +90,7 @@ class EventTransformer extends Transformer
             'id' => $keyword->id,
             'aggregate' => (boolean)$keyword->aggregate,
             'data_source' => $keyword->data_source_id,
-            'name' => json_decode($keyword->name_tr),
+            'name' => json_decode($keyword->name),
             '@id' => url('keyword/' . $keyword->id),
             '@context' => 'http://schema.org',
             '@type' => 'Keyword',

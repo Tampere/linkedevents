@@ -10,10 +10,10 @@ class Place extends Model
     public $incrementing = false;
 
     protected $casts = [
-        'name_tr' => 'json',
-        'info_url_tr' => 'json',
-        'street_address_tr' => 'json',
-        'address_locality_tr' => 'json',
+        'name' => 'json',
+        'info_url' => 'json',
+        'street_address' => 'json',
+        'address_locality' => 'json',
         'postal_code' => 'integer'
     ];
 
