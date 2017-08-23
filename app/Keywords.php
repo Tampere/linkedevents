@@ -26,26 +26,16 @@ class Keywords extends Model
 
     public static function getOrCreateKeywordId($tag, $context)
     {
-        $keyword = self::firstOrNew(['name' => $tag]);
-        if(!$keyword->exists) {
-            $keyword->id = "$context:$tag";
-            $keyword->name_tr = self::getRepeatingTranslatedJson($tag);
-            $keyword->data_source_id = $context;
-            $keyword->save();
+        $keyword = self::find("$context:$tag");
+
+        if(!$keyword) {
+            $keyword = self::create([
+                'id' => "$context:$tag",
+                'name' => $tag,
+                'data_source_id' => $context,
+            ]);
         }
 
         return $keyword->id;
-    }
-
-    private static function getRepeatingTranslatedJson($link)
-    {
-        $str = '{';
-        foreach(self::$langs as $lang) {
-            $str .= '"'.$lang.'":"'.$link.'",';
-        }
-        $str = substr($str, 0, -1);
-        $str .= '}';
-
-        return $str;
     }
 }

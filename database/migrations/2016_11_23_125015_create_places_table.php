@@ -15,6 +15,7 @@ class CreatePlacesTable extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->string('id', 50);
+            $table->string('event_id', 50);
             $table->text('name')->nullable();
             $table->integer('origin_id')->unsigned()->nullable();
             $table->text('info_url')->nullable();
@@ -38,6 +39,11 @@ class CreatePlacesTable extends Migration
             $table->timestamps();
 
             $table->primary('id');
+
+            $table->foreign('event_id')
+                ->references('id')
+                ->on('events')
+                ->onDelete('cascade');
         });
     }
 

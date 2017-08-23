@@ -33,7 +33,7 @@ class Event extends Model
 
     public function location()
     {
-        return $this->hasOne(Place::class, 'id', 'place_id');
+        return $this->hasOne(Place::class);
     }
 
     public function image()
@@ -53,7 +53,7 @@ class Event extends Model
 
     public function offer()
     {
-        return $this->hasOne(Offer::class, 'id', 'offer_id');
+        return $this->hasOne(Offer::class);
     }
 
     public function getSuperEventIdAttribute($id)

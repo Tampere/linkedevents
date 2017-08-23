@@ -36,12 +36,10 @@ class CreateEventsTable extends Migration
             $table->integer('last_modified_by_id')->nullable();
             $table->string('publisher_id', 50)->nullable();
             $table->string('super_event_id', 50)->nullable();
-            $table->string('place_id', 50);
             $table->unsignedTinyInteger('publication_status')->nullable();
             $table->integer('image_id')->unsigned()->nullable();
             $table->boolean('deleted')->default(false);
             $table->string('image')->nullable();
-            $table->integer('offer_id')->unsigned()->nullable();
 
             $table->timestamps();
 
@@ -53,16 +51,6 @@ class CreateEventsTable extends Migration
             $table->foreign('super_event_id')
                 ->references('id')
                 ->on('events')
-                ->onDelete('cascade');
-
-            $table->foreign('place_id')
-                ->references('id')
-                ->on('places')
-                ->onDelete('cascade');
-
-            $table->foreign('offer_id')
-                ->references('id')
-                ->on('offers')
                 ->onDelete('cascade');
         });
     }

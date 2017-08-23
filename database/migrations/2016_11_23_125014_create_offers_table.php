@@ -15,10 +15,17 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('event_id', 50);
             $table->text('price')->nullable();
             $table->text('info_url')->nullable();
             $table->text('description')->nullable();
             $table->boolean('is_free')->default(true);
+
+            $table->foreign('event_id')
+                ->references('id')
+                ->on('events')
+                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
