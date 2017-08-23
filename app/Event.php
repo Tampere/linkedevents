@@ -11,7 +11,9 @@ class Event extends Model
     use Searchable;
 
     protected $primaryKey = 'id';
+
     public $incrementing = false;
+
     protected $casts = [
         'description' => 'json',
         'name' => 'json',
@@ -33,7 +35,7 @@ class Event extends Model
 
     public function location()
     {
-        return $this->hasOne(Place::class);
+        return $this->hasOne(Place::class, 'event_id', 'id');
     }
 
     public function image()

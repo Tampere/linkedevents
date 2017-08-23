@@ -17,4 +17,8 @@ class Place extends Model
         'postal_code' => 'integer'
     ];
 
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
 }
