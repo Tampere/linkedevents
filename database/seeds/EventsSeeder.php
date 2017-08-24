@@ -15,6 +15,8 @@ class EventsSeeder extends Seeder
         'ru',
     ];
 
+    protected $output;
+
     protected $data = [];
 
     protected $eventIdsAdded = [];
@@ -39,7 +41,7 @@ class EventsSeeder extends Seeder
     {
         $startTime = microtime(true);
         $this->command->info("Begin import at {$startTime}");
-
+        $this->output = $this->command->getOutput();
         $this->existingEvents = Event::all(['id', 'updated_at']);
         $this->existingEventIds = $this->existingEvents->pluck('id')->toArray();
 
@@ -112,7 +114,7 @@ class EventsSeeder extends Seeder
     {
         foreach ($this->langs as $lang) {
             $this->command->info("Now processing lang: {$lang}");
-            $this->command->getOutput()->progressStart(count($this->data[$lang]));
+            $this->output->progressStart(count($this->data[$lang]));
 
             foreach ($this->data[$lang] as $event) {
                 if ($matching = $this->eventsToAdd->where('item_id', $event->item_id)->first()) {
@@ -137,9 +139,9 @@ class EventsSeeder extends Seeder
 
                     $this->eventsToAdd->push($newEvent);
                 }
-                $this->command->getOutput()->progressAdvance();
+                $this->output->progressAdvance();
             }
-            $this->command->getOutput()->progressFinish();
+            $this->output->progressFinish();
         }
     }
 
@@ -225,7 +227,7 @@ class EventsSeeder extends Seeder
 
     private function ProcessStandardEventData()
     {
-        $this->command->getOutput()->progressStart($this->eventsToAdd->count());
+        $this->output->progressStart($this->eventsToAdd->count());
 
         foreach($this->eventsToAdd as $event) {
             if($this->eventExists($event)) {
@@ -237,10 +239,10 @@ class EventsSeeder extends Seeder
                 $this->eventIdsAdded[] = "visittampere:{$event->item_id}";
             }
 
-            $this->command->getOutput()->progressAdvance();
+            $this->output->progressAdvance();
         }
 
-        $this->command->getOutput()->progressFinish();
+        $this->output->progressFinish();
     }
 
     private function destroyEvent($event)
