@@ -5,7 +5,6 @@ class EventTransformer extends Transformer
 {
     public function transform($item)
     {
-        dd($item);
         $payload = [
             'id' => $item->id,
             '@id' => url('/event/' . $item->id),

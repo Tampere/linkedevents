@@ -192,6 +192,7 @@ class EventsSeeder extends Seeder
             'image' => isset($event->image) ? $event->image->src : null,
             'is_recurring_super' => false,
             'info_url' => $event->contact_info->link ? $this->getRepeatingTranslatedJson($event->contact_info->link) : null,
+            'data_source_id' => 'visittampere',
         ]);
 
         $newevent->keywords()->attach($keywordIds);
@@ -241,6 +242,8 @@ class EventsSeeder extends Seeder
 
             $this->output->progressAdvance();
         }
+
+        unset($this->eventsToAdd);
 
         $this->output->progressFinish();
     }

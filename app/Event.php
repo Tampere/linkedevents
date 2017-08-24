@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Filters\EventFilters;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
@@ -13,6 +14,8 @@ class Event extends Model
     protected $primaryKey = 'id';
 
     public $incrementing = false;
+
+    protected $with = ['location', 'offer', 'keywords'];
 
     protected $casts = [
         'description' => 'json',
@@ -35,7 +38,7 @@ class Event extends Model
 
     public function location()
     {
-        return $this->hasOne(Place::class, 'event_id', 'id');
+        return $this->hasOne(Place::class);
     }
 
     public function image()
@@ -65,6 +68,11 @@ class Event extends Model
         return [
             '@id' => url('/event/' . $id)
         ];
+    }
+
+    public function scopeFilter($query, EventFilters $filters)
+    {
+        return $filters->apply($query);
     }
 
     /**
@@ -97,16 +105,6 @@ class Event extends Model
                     Carbon::now()->endOfDay()
                     : request('end')
             );
-        }
-    }
-
-    public function scopeKeywords($query)
-    {
-        if(request('keyword')) {
-            $query->whereHas('keywords', function($q) {
-                $keywords = explode(',', request('keyword'));
-                $q->whereIn('keywords.id', $keywords);
-            });
         }
     }
 
