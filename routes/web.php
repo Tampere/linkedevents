@@ -14,13 +14,17 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('event', 'EventsController@index');
-Route::get('event/{id}', 'EventsController@show');
+Route::get('v1', 'HomeController@index');
 
-Route::get('keyword', 'KeywordsController@index');
-Route::get('keyword/{id}', 'KeywordsController@show');
+Route::group(['prefix' => 'v1'], function () {
+    Route::get('event', 'EventsController@index');
+    Route::get('event/{id}', 'EventsController@show');
 
-Route::get('place', 'PlacesController@index');
-Route::get('place/{id}', 'PlacesController@show');
+    Route::get('keyword', 'KeywordsController@index');
+    Route::get('keyword/{id}', 'KeywordsController@show');
 
-Route::get('search/', 'SearchController@index');
+    Route::get('place', 'PlacesController@index');
+    Route::get('place/{id}', 'PlacesController@show');
+
+    Route::get('search/', 'SearchController@index');
+});

@@ -9,7 +9,7 @@ class PlaceTransformer extends Transformer
     {
         $payload = [
             'id' => $location->id,
-            '@id' => url('/place/' . $location->id),
+            '@id' => url('/v1/place/' . $location->id),
             '@context' => 'http://schema.org',
             '@type' => 'Place',
             'name' => json_decode($location->name),

@@ -7,7 +7,7 @@ class EventTransformer extends Transformer
     {
         $payload = [
             'id' => $item->id,
-            '@id' => url('/event/' . $item->id),
+            '@id' => url('/v1/event/' . $item->id),
             '@context' => 'http://schema.org',
             '@type' => 'Event/LinkedEvent',
             'location' => $this->transformLocation($item->location),
@@ -38,7 +38,7 @@ class EventTransformer extends Transformer
     {
         return array_map(function($id) {
             return [
-                '@id' => url('/event/' . $id)
+                '@id' => url('/v1/event/' . $id)
             ];
         }, $subEventIds);
     }
@@ -47,7 +47,7 @@ class EventTransformer extends Transformer
     {
         $payload = [
             'id' => $location->id,
-            '@id' => url('/place/' . $location->id),
+            '@id' => url('/v1/place/' . $location->id),
             '@context' => 'http://schema.org',
             '@type' => 'Place',
             'name' => json_decode($location->name),
