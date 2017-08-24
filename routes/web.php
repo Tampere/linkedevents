@@ -14,7 +14,9 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('v1', 'HomeController@index');
+Route::get('v1', function() {
+    return redirect('/');
+});
 
 Route::group(['prefix' => 'v1'], function () {
     Route::get('event', 'EventsController@index');
