@@ -22,7 +22,7 @@ class EventFilters extends Filters
     protected function last_modified_since($time)
     {
         $time = $time == 'today' ? Carbon::now()->startOfDay() : $time;
-        return $this->builder->where('last_modified_time', '>=', $time);
+        return $this->builder->where('updated_at', '>=', $time);
     }
 
     protected function start($time)
