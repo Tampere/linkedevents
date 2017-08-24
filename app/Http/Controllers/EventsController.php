@@ -38,6 +38,7 @@ class EventsController extends Controller
             (request('min_duration') ? '&min_duration='.request('min_duration') : '') .
             (request('max_duration') ? '&max_duration='.request('max_duration') : '') .
             (request('sort') ? '&sort='.request('sort') : '') .
+            (request('location') ? '&location='.request('location') : '') .
             (request('keyword') ? '&keyword='.request('keyword') : '');
 
         return $this->respond([

@@ -12,6 +12,7 @@ class EventFilters extends Filters
         'end',
         'data_source',
         'keyword',
+        'location',
         'recurring',
         'min_duration',
         'max_duration',
@@ -46,6 +47,14 @@ class EventFilters extends Filters
         return $this->builder->whereHas('keywords', function($q) use ($keywords) {
             $keywords = explode(',', $keywords);
             $q->whereIn('keywords.id', $keywords);
+        });
+    }
+
+    protected function location($locations)
+    {
+        return $this->builder->whereHas('location', function($q) use ($locations) {
+            $locations = explode(',', $locations);
+            $q->whereIn('places.id', $locations);
         });
     }
 

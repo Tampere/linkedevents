@@ -76,39 +76,6 @@ class Event extends Model
     }
 
     /**
-     * @param $query
-     * @return mixed
-     */
-    public function scopeStartsAt($query)
-    {
-        if(request('start')) {
-            return $query->where(
-                'start_time',
-                '>=',
-                request('start') == 'today' ?
-                    Carbon::now()->endOfDay()
-                    : request('start'));
-        }
-    }
-
-    /**
-     * @param $query
-     * @return mixed
-     */
-    public function scopeEndsAt($query)
-    {
-        if(request('end')) {
-            return $query->where(
-                'end_time',
-                '<=',
-                request('end') == 'today' ?
-                    Carbon::now()->endOfDay()
-                    : request('end')
-            );
-        }
-    }
-
-    /**
      * @return array
      */
     public function toSearchableArray()
